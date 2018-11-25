@@ -1,0 +1,35 @@
+mat-toolbar {
+  height:9vh;
+  background-color: rgb(116, 158, 158);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+a:active {
+  color: brown;
+}
+
+.navogation-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+
+.logo {
+  color: rgb(238, 131, 10);
+  font-size: 23px;
+}

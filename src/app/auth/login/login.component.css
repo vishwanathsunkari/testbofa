@@ -1,0 +1,20 @@
+mat-form-field {
+  width: 300px;
+}
+
+.login {
+  padding: 50px;
+}
+
+
+section {
+  background-color: rgb(34, 32, 32);
+  /* background-color: rgb(232, 248, 7); */
+  height: 91vh;
+
+}
+
+.login {
+  height: 350px;
+  margin-top: 50px;
+}

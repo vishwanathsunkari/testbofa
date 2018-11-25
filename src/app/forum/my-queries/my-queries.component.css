@@ -1,0 +1,7 @@
+.info-text {
+  text-align: center;
+}
+mat-accordion {
+  display: block;
+  margin-top: 1rem;
+}

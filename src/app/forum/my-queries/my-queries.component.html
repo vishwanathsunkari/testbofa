@@ -1,0 +1,18 @@
+
+
+  <section  *ngFor="let query of myQueries">
+      <mat-accordion multi="true" class="myQuery" fxLayoutAlign="center center">
+        <mat-expansion-panel fxFlex="700px" fxLayout="column" >
+          <mat-expansion-panel-header >
+              {{query.question}}
+          </mat-expansion-panel-header>
+          <p>{{query.description}}</p>
+            <mat-action-row>
+              <button mat-button color="primary" >EDIT</button>
+              <button mat-button color="warn" >DELETE</button>
+            </mat-action-row>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    </section>
+    <p class="info-text mat-body-1" *ngIf="myQueries.length < 1">No Queries added Yet!</p>

@@ -1,0 +1,20 @@
+<section class="new-query" fxLayout fxLayoutAlign="center center">
+  <form  #f="ngForm" (ngSubmit)="onSaveQuery(f)">
+      <mat-card fxFlex.xs="100%" fxFlex="700px">
+          <mat-card-title fxLayoutAlign="center">Time to ask!</mat-card-title>
+          <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+              <mat-form-field>
+                  <input type="text" matInput placeholder="Your Question" ngModel name="question" required #textInput="ngModel">
+                  <mat-error *ngIf="textInput.hasError('required')">Field must not be empty</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                  <textarea name="description" matInput  rows="6" placeholder="Your Description" ngModel required minlength="20" #descInput="ngModel"></textarea>
+                </mat-form-field>
+          </mat-card-content>
+          <mat-card-actions fxLayoutAlign="center">
+            <button  type="submit" color="primary" mat-raised-button [disabled]="f.invalid">Submit</button>
+            <button type="button"  color="warn" mat-raised-button (click)="onStop(f)">Cancel</button>
+          </mat-card-actions>
+        </mat-card>
+  </form>
+    </section>
