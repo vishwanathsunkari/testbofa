@@ -10,6 +10,7 @@ private questions: Query[] = [];
 value;
 private queryUpdated = new Subject<Query[]>();
 private queryUpdated1 = new Subject<Query[]>();
+private queryCountUpdated = new Subject<number>();
 
 private availaibleQuestions: Query[]  = [
   {id: 'Tech', question: 'How to request for Domain access in BOFA?', description: 'Please explain briefly how to get the domain access for BOFA public domain', state: 'completed', date: 1428496544765},
@@ -40,6 +41,8 @@ private availaibleQuestions: Query[]  = [
       this.availaibleQuestions.push(que);
       this.queryUpdated.next([...this.questions]);
       this.queryUpdated1.next([...this.availaibleQuestions]);
+      console.log(this.questions.length);
+      this.queryCountUpdated.next([...this.questions].length);
   }
 
   getQueries() {
@@ -59,6 +62,10 @@ getQuery(id: string) {
     return this.queryUpdated1.asObservable();
   }
 
+  getQueryCountUpdated() {
+    return this.queryCountUpdated.asObservable();
+  }
+
   getAvailQueries() {
     return [...this.availaibleQuestions];
   }
@@ -73,6 +80,7 @@ getQuery(id: string) {
      }
      this.availaibleQuestions.splice(this.value, 1);
      this.queryUpdated1.next([...this.availaibleQuestions]);
+     this.queryCountUpdated.next([...this.questions].length);
     return [...this.questions];
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
 import { User } from '../../auth/user.model';
+import { QuestionService } from '../question.service';
 
 
 @Component({
@@ -10,10 +11,20 @@ import { User } from '../../auth/user.model';
 })
 export class AccountComponent implements OnInit {
 user: User;
-  constructor(public authService: AuthService) { }
-count=50;
+public classReference = AccountComponent;
+  constructor(public authService: AuthService, public questionService: QuestionService) { }
+static count: number= 0;
   ngOnInit() {
     this.user = this.authService.getUser();
+    this.questionService.getQueryCountUpdated().subscribe(value => {
+      AccountComponent.count = value;
+      console.log(AccountComponent.count);
+    });
+    console.log(AccountComponent.count);
+  }
+
+  get staticCount() {
+    return AccountComponent.count;
   }
 
 }

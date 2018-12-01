@@ -24,7 +24,7 @@
 
   .example-stretched-tabs {
     /* max-width: 800px; */
-    width: 90%;
+    width: 300px;
   }
   
   .example-header-image {
@@ -37,3 +37,57 @@
   .example-margin {
     margin: 0 10px;
   }
+
+  .account-maindetails-div{
+      /* border: 1px solid red; */
+  }
+
+.account-aboutme-div{
+    
+    /* border: 1px solid green; */
+}
+
+.account-myquestions-div{
+    /* border: 1px solid yellow; */
+}
+.account-aboutme-p{
+    padding:10px;
+    line-height: 25px;
+}
+.account-numberqstns-btn{
+    width: 100px;
+    padding: 30px;
+    border-radius: 50%;
+    border: none;
+}
+.account-main-div{
+    margin-top:30px;
+    margin-left: 280px;
+    border: 1px solid silver;
+    box-shadow: 1px 1px 5px 1px silver;
+    margin-right: 280px;
+}
+.account-proimage-div,.account-name-div,.account-prodetails-div{
+    /* border: 1px solid green; */
+    height: 200px;
+}
+
+.account-name-div{
+    /* text-align: center; */
+    font-size: 30px;
+}
+
+.account-prodetails-div{
+    text-align: center;
+    font-size: 45px;
+}
+
+.account-hr{
+    /* border: 1px solid red; */
+    /* // background-color: red; */
+    background-image: linear-gradient(to right,transparent, red, transparent);
+    padding:0;
+    margin-top:10px;
+    border: 0;
+    height: 1px;
+}

@@ -1,60 +1,85 @@
-
-<section fxLayout="column">
-    <mat-card fxFlex="100%" style="height: 35%" >
-
-      </mat-card>
-
-
-
-
-    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" >
-        <mat-tab label="About"> 
-            <section fxLayoutAlign="center center" class="bgColor">
-                <mat-card class="example-card">
-                    <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>{{user.userId}}</mat-card-title>
-                      <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="https://www.ibts.org/wp-content/uploads/2017/08/iStock-476085198.jpg" alt="Photo of BOA employee" style="height: 250px; width: 350px">
-                    <mat-card-content>
-                      <p>
-                          Stay active and use the information here and also share your thoughts! Get to know other people who share your passion!
-                          Never stop! give into new challenges every day.
-                      </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button mat-button>Follow</button>
-                      <button mat-button>Edit</button>
-                    </mat-card-actions>
-                  </mat-card>
-            </section>  
-        </mat-tab>
-        <mat-tab label="Account"> 
-            <section fxLayoutAlign="center center" class="bgColor">
-                <mat-card class="example-large-box mat-elevation-z4" fxLayoutAlign="start">
-        
-                  </mat-card>
-            </section>
-        </mat-tab>
-        <mat-tab label="Progress"> 
-          <section fxLayoutAlign="center center" class="bgColor">
-              <mat-card class="example-large-box mat-elevation-z4" fxLayout="column" fxLayoutAlign="center center" >
-                  <mat-card-title>{{user.email}}</mat-card-title>
-                  <mat-card-subtitle>ProgressBar</mat-card-subtitle>
-                  <mat-progress-spinner class="example-margin" color="primary" mode="determinate" [value]="count"></mat-progress-spinner>
-                  <mat-card-footer>
-                      <p>
-                          Number of queries asked:  {{count}}
-                      </p>
-                    </mat-card-footer>
-              </mat-card>
-          </section>
-        </mat-tab>
-      </mat-tab-group>
+<div class="account-main-div">
+  <div class="row account-maindetails-div">
+      <!-- <div class="col-md-2 col-xs-2"></div> -->
+      <div class="col-md-4 col-xs-4 account-proimage-div" fxLayoutAlign="center center">
+          <img src="https://www.ibts.org/wp-content/uploads/2017/08/iStock-476085198.jpg" height="150" >
+        </div>
+        <div class="col-md-5 col-xs-5 account-name-div">
+            <p>{{user.userId}}</p>
+            <p style="font-size: 14px;"><span></span><span>{{user.email}} </span></p>
+          </div>
+        <div class="col-md-3 col-xs-3 account-prodetails-div">
+            <p style="color:rgb(250, 148, 146);" fxLayoutAlign="center center">{{staticCount}}</p>
+            <p style="font-size: 14px;padding: 0;margin:0;">Questions asked</p>
+        </div>
+        <!-- <div class="col-md-2 col-xs-2"></div> -->
+  </div> 
+  <hr class="account-hr" />
+  <div class="row">
+    <!-- <div class="col-md-2 col-xs-2"></div> -->
+    <div class="col-md-8 col-xs-8 account-aboutme-div">
+        <p style="text-align: center;"><b>About me</b></p>
+        <p class="account-aboutme-p">
+            Hello...Dear user {{user.email}}
+            Stay active and use the information here and also share your thoughts! Get to know other people who share your passion!
+            Never stop! give into new challenges every day.
+        </p>
+    </div>
+    <div class="col-md-4 col-xs-4 account-myquestions-div" fxLayout="column">
+      <p>ID: {{user.userId}}</p>
+      <p>email: {{user.email}}</p>
+      <p>company: Infosys</p>
+      <p>Project: BOFA</p> 
+    </div>
+    <!-- <div class="col-md-2 col-xs-2"></div> -->
+  </div>
     
-      
-      
-</section>
+</div>
+  
 
 
+      <!-- <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" >
+          <mat-tab label="About"> 
+              <section fxLayoutAlign="center center" class="bgColor">
+                  <mat-card class="example-card">
+                      <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>{{user.userId}}</mat-card-title>
+                        <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+                      </mat-card-header>
+                      <img mat-card-image src="https://www.ibts.org/wp-content/uploads/2017/08/iStock-476085198.jpg" alt="Photo of BOA employee" style="height: 250px; width: 350px">
+                      <mat-card-content>
+                        <p>
+                            Stay active and use the information here and also share your thoughts! Get to know other people who share your passion!
+                            Never stop! give into new challenges every day.
+                        </p>
+                      </mat-card-content>
+                      <mat-card-actions>
+                        <button mat-button>Follow</button>
+                        <button mat-button>Edit</button>
+                      </mat-card-actions>
+                    </mat-card>
+              </section>  
+          </mat-tab>
+          <mat-tab label="Account"> 
+              <section fxLayoutAlign="center center" class="bgColor">
+                  <mat-card class="example-large-box mat-elevation-z4" fxLayoutAlign="start">
+          
+                    </mat-card>
+              </section>
+          </mat-tab>
+          <mat-tab label="Progress"> 
+            <section fxLayoutAlign="center center" class="bgColor">
+                <mat-card class="example-large-box mat-elevation-z4" fxLayout="column" fxLayoutAlign="center center" >
+                    <mat-card-title>{{user.email}}</mat-card-title>
+                    <mat-card-subtitle>ProgressBar</mat-card-subtitle>
+                    <mat-progress-spinner class="example-margin" color="primary" mode="determinate" [value]="count"></mat-progress-spinner>
+                    <mat-card-footer>
+                        <p>
+                            Number of queries asked:  {{count}}
+                        </p>
+                      </mat-card-footer>
+                </mat-card>
+            </section>
+          </mat-tab>
+        </mat-tab-group>-->
