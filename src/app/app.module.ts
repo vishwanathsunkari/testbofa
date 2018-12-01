@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -19,6 +20,9 @@ import { MyQueriesComponent } from './forum/my-queries/my-queries.component';
 import { OnBoardingComponent } from './on-boarding/on-boarding.component';
 import { StopQueryComponent } from './forum/stopQuery.component';
 import { AuthService } from './auth/auth.service';
+import { EditQueryComponent } from './forum/editQuery.component';
+import { SingleQueryComponent } from './forum/single-query/single-query.component';
+import { AccountComponent } from './forum/account/account.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,10 @@ import { AuthService } from './auth/auth.service';
     QueryFeedComponent,
     MyQueriesComponent,
     OnBoardingComponent,
-    StopQueryComponent
+    StopQueryComponent,
+    EditQueryComponent,
+    SingleQueryComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +52,6 @@ import { AuthService } from './auth/auth.service';
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
-  entryComponents: [StopQueryComponent]
+  entryComponents: [StopQueryComponent, EditQueryComponent]
 })
 export class AppModule { }

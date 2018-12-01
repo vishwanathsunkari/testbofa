@@ -1,15 +1,15 @@
-
-
-  <section  *ngFor="let query of myQueries">
-      <mat-accordion multi="true" class="myQuery" fxLayoutAlign="center center">
+  <section  >
+      <mat-accordion multi="true" class="myQuery" fxLayoutAlign="center center" *ngFor="let query of myQueries; let i = index">
         <mat-expansion-panel fxFlex="700px" fxLayout="column" >
           <mat-expansion-panel-header >
               {{query.question}}
           </mat-expansion-panel-header>
           <p>{{query.description}}</p>
             <mat-action-row>
-              <button mat-button color="primary" >EDIT</button>
-              <button mat-button color="warn" >DELETE</button>
+                
+                
+              <a mat-button color="primary"  [routerLink]="['/forum/edit', 'query.id']" ><mat-icon>edit</mat-icon></a>
+              <button mat-button color="warn" (click)="onDelete(i)"><mat-icon>delete</mat-icon></button>
             </mat-action-row>
 
         </mat-expansion-panel>

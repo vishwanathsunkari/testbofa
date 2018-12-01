@@ -3,6 +3,6 @@ export interface Query {
   question: string;
   description: string;
   date?: any |  Date;
-  state?: 'completed' | 'cancelled' | null;
+  state?: 'completed' | 'cancelled' | 'inProgress' | null;
 }
 

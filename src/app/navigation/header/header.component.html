@@ -5,15 +5,39 @@
     </button>
   </div>
     <div  fxLayout  fxLayoutGap="10px">
-      <a routerLink="/" class="logo">askMECODE</a>
+      <a routerLink="/" class="logo">askBOA</a>
       <a [routerLink]="['/onBoarding']" routerLinkActive="active" >OnBoardingProcess</a>
     </div>
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
       <ul fxLayout fxLayoutGap="10px" class="navogation-items">
         <li *ngIf="!isAuth"><a routerLink="/signup" routerLinkActive="active">Signup</a></li>
         <li *ngIf="!isAuth"><a routerLink="/login" routerLinkActive="active">Login</a></li>
-        <li *ngIf="isAuth"><a routerLink="/forum" routerLinkActive="active">Forum</a></li>
-        <li *ngIf="isAuth"><a style="cursor: pointer" (click)="onLogout()">Logout</a></li>
+            <li *ngIf="isAuth">
+              <a>
+                  <button mat-button [matMenuTriggerFor]="menu">Query</button>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item routerLink="/forum/new">AddQuery</button>
+                    <button mat-menu-item routerLink="/forum/myQueries">MyQueries</button>
+                    <button mat-menu-item routerLink="/forum/queryFeed">QueryFeed</button>
+                  </mat-menu>
+              </a>
+            </li>
+        <!-- <li *ngIf="isAuth"><a routerLink="/forum" routerLinkActive="active">Forum</a></li> -->
+        <li *ngIf="isAuth"><a routerLink="/account" routerLinkActive="active">
+        <button mat-button >
+            <mat-icon>person</mat-icon>Profile</button>
+          </a></li>
+        <li *ngIf="isAuth">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>eject</mat-icon>
+                <span (click)="onLogout()">Logout</span>
+              </button>
+            </mat-menu>
+        </li>
       </ul>
     </div>
   </mat-toolbar>

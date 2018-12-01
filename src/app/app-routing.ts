@@ -7,12 +7,23 @@ import { ForumComponent } from './forum/forum.component';
 import { OnBoardingComponent } from './on-boarding/on-boarding.component';
 import { MyQueriesComponent } from './forum/my-queries/my-queries.component';
 import { AuthGaurd } from './auth/auth.guard';
+import { SingleQueryComponent } from './forum/single-query/single-query.component';
+import { NewQueryComponent } from './forum/new-query/new-query.component';
+import { AccountComponent } from './forum/account/account.component';
+import { QueryFeedComponent } from './forum/query-feed/query-feed.component';
 
 const routes: Routes = [
   {path: '' , component: WelcomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'signup', component: SignupComponent},
-  { path: 'forum', component: ForumComponent , canActivate: [AuthGaurd]},
+  { path: 'forum', component: ForumComponent , children : [
+    {path: 'query', component: SingleQueryComponent},
+    {path: 'new', component: NewQueryComponent},
+    {path: 'edit/:id', component: NewQueryComponent},
+    {path: 'myQueries', component: MyQueriesComponent},
+    {path: 'queryFeed', component: QueryFeedComponent},
+  ], canActivate: [AuthGaurd]},
+  {path: 'account', component: AccountComponent, canActivate: [AuthGaurd]},
   { path: 'onBoarding', component: OnBoardingComponent},
   {path: '**', redirectTo: '/', pathMatch: 'full'}
 ];

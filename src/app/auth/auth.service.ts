@@ -18,9 +18,10 @@ constructor(private router: Router) {}
       userId: Math.round(Math.random() * 1000).toString()
     };
     console.log(this.user);
-    this.authChange.next(true);
+    this.authChange.next(false);
     this.router.navigate(['/login']);
   }
+
 
   login(authData: AuthData) {
     this.user = {
@@ -29,7 +30,7 @@ constructor(private router: Router) {}
     };
     console.log(this.user);
     this.authChange.next(true);
-    this.router.navigate(['/forum']);
+    this.router.navigate(['/']);
   }
 
   logout() {

@@ -5,3 +5,7 @@
 .table {
   padding: 30px;
 }
+
+.mat-element-row :hover {
+  background: #f5f5f5;
+}

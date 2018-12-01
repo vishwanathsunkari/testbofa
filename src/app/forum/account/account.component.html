@@ -1,0 +1,60 @@
+
+<section fxLayout="column">
+    <mat-card fxFlex="100%" style="height: 35%" >
+
+      </mat-card>
+
+
+
+
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" >
+        <mat-tab label="About"> 
+            <section fxLayoutAlign="center center" class="bgColor">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{user.userId}}</mat-card-title>
+                      <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="https://www.ibts.org/wp-content/uploads/2017/08/iStock-476085198.jpg" alt="Photo of BOA employee" style="height: 250px; width: 350px">
+                    <mat-card-content>
+                      <p>
+                          Stay active and use the information here and also share your thoughts! Get to know other people who share your passion!
+                          Never stop! give into new challenges every day.
+                      </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button>Follow</button>
+                      <button mat-button>Edit</button>
+                    </mat-card-actions>
+                  </mat-card>
+            </section>  
+        </mat-tab>
+        <mat-tab label="Account"> 
+            <section fxLayoutAlign="center center" class="bgColor">
+                <mat-card class="example-large-box mat-elevation-z4" fxLayoutAlign="start">
+        
+                  </mat-card>
+            </section>
+        </mat-tab>
+        <mat-tab label="Progress"> 
+          <section fxLayoutAlign="center center" class="bgColor">
+              <mat-card class="example-large-box mat-elevation-z4" fxLayout="column" fxLayoutAlign="center center" >
+                  <mat-card-title>{{user.email}}</mat-card-title>
+                  <mat-card-subtitle>ProgressBar</mat-card-subtitle>
+                  <mat-progress-spinner class="example-margin" color="primary" mode="determinate" [value]="count"></mat-progress-spinner>
+                  <mat-card-footer>
+                      <p>
+                          Number of queries asked:  {{count}}
+                      </p>
+                    </mat-card-footer>
+              </mat-card>
+          </section>
+        </mat-tab>
+      </mat-tab-group>
+    
+      
+      
+</section>
+
+
