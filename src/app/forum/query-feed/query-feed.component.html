@@ -1,6 +1,10 @@
+<div class="queryFeed-div">
+
+    </div>
 <div class="table">
     <mat-card class="table">
-        <div fxLayoutAlign="center center">
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <mat-card-title>Time to View Queries</mat-card-title>
             <mat-form-field fxFlex="30%">
                 <input matInput placeholder="Your Search" type="text" (keyup)="doFilter($event.target.value)">
               </mat-form-field>
@@ -26,7 +30,7 @@
                 <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
                 <mat-row class="mat-element-row" *matRowDef="let row; columns: displayedColumns; let i = index;" (click)="onClick(i)"></mat-row>
             </mat-table>
-            <mat-paginator  [pageSize]="10" [pageSizeOptions]="[1, 2, 5, 10]"></mat-paginator>
+            <mat-paginator  [pageSize]="10" [pageSizeOptions]="[2, 5, 10, 15]"></mat-paginator>
       </mat-card>
 
 </div>

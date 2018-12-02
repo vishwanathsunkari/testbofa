@@ -1,7 +1,18 @@
 .onBoarding  {
   padding: 30px;
+  margin-top: -310px;
 }
 
 mat-card {
   width: 100%;
+}
+
+.onBoarding-div{
+  text-align: center;
+    background-color: #929292;
+    height: 49vh;
+    color: white;
+    padding: 0;
+    margin:0;
+    font-size: 35px;
 }

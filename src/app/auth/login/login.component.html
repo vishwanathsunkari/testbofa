@@ -1,5 +1,8 @@
-<section fxLayout fxLayoutAlign="center">
-    <mat-card fxFlex=450px  class="login">
+<div class="login-div">
+
+  </div>
+<div fxLayout fxLayoutAlign="center" class="login">
+    <mat-card fxFlex=450px  >
         <mat-card-title fxLayoutAlign="center">Time to Login!</mat-card-title>
         <form fxLayout="column" class="login-form" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
             <mat-form-field>
@@ -11,8 +14,7 @@
               <input type="password" matInput placeholder="Your password" ngModel name="password" required #pwdInput="ngModel" minlength="6">
               <mat-error>password is Invalid</mat-error>
             </mat-form-field>
-            <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary">Login!</button>
+            <button type="submit" mat-raised-button [disabled]="f.invalid" color="primary" style="margin-top: 10px">Login!</button>
           </form>
       </mat-card>
-
-</section>
+    </div>

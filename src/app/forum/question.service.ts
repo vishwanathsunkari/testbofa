@@ -36,7 +36,7 @@ private availaibleQuestions: Query[]  = [
       question: question,
       description: description,
       date: new Date(),
-      state: 'inProgress'
+      state: 'not-Started'
     };
     
       this.questions.push(que);

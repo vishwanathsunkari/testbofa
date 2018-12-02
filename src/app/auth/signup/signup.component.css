@@ -11,7 +11,17 @@ section {
 }
 
 .signup {
-  height: 350px;
-  margin-top: 50px;
+  height: 380px;
+  margin-top: -220px;
 
+}
+
+.signup-div{
+  text-align: center;
+    background-color: #929292;
+    height: 50vh;
+    color: white;
+    padding: 0;
+    margin:0;
+    font-size: 35px;
 }

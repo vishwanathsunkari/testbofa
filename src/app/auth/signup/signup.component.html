@@ -1,5 +1,10 @@
-<section   fxLayout fxLayoutAlign="center">
-  <mat-card fxFlex=450px class="signup">
+<div class="signup-div">
+
+  </div>
+
+
+<div   fxLayout fxLayoutAlign="center" class="signup">
+  <mat-card fxFlex=450px >
       <mat-card-title fxLayoutAlign="center">Time to Sign up!</mat-card-title>
     <form fxLayout="column" class="signup-form" fxLayoutAlign="center center" fxLayoutGap="5px" #f="ngForm" (ngSubmit)="onSubmit(f)">
       <mat-form-field >
@@ -17,8 +22,8 @@
         <mat-datepicker-toggle matSuffix  [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-        <mat-checkbox ngModel name="agree" required color="primary">Agree to terms and conditions</mat-checkbox>
+        <mat-checkbox ngModel name="agree" required color="accent">Agree to terms and conditions</mat-checkbox>
       <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Sign up!</button>
     </form>
   </mat-card>
-</section>
+</div>

@@ -1,5 +1,6 @@
 .info-text {
   text-align: center;
+  color: orange;
 }
 mat-accordion {
   display: block;
