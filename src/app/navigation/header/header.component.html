@@ -4,12 +4,12 @@
       <mat-icon>menu</mat-icon>
     </button>
   </div>
-    <div  fxLayout  fxLayoutGap="10px">
+    <div>
       <a routerLink="/" class="logo">askBOA</a>
-      <a [routerLink]="['/onBoarding']" routerLinkActive="active" >OnBoardingProcess</a>
     </div>
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-      <ul fxLayout fxLayoutGap="10px" class="navogation-items">
+      <ul fxLayout fxLayoutGap="35px" class="navogation-items">
+        <li><a [routerLink]="['/onBoarding']" routerLinkActive="active" >OnBoardingProcess</a></li>
         <li *ngIf="!isAuth"><a routerLink="/signup" routerLinkActive="active">Signup</a></li>
         <li *ngIf="!isAuth"><a routerLink="/login" routerLinkActive="active">Login</a></li>
             <li *ngIf="isAuth">
@@ -24,8 +24,7 @@
             </li>
         <!-- <li *ngIf="isAuth"><a routerLink="/forum" routerLinkActive="active">Forum</a></li> -->
         <li *ngIf="isAuth"><a routerLink="/account" routerLinkActive="active">
-        <button mat-button >
-            <mat-icon>person</mat-icon>Profile</button>
+        <button mat-button>Profile</button>
           </a></li>
         <li *ngIf="isAuth">
           <button mat-icon-button [matMenuTriggerFor]="menu">

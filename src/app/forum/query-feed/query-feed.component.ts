@@ -41,6 +41,8 @@ export class QueryFeedComponent implements OnInit, AfterViewInit, OnDestroy {
 
   onClick(i: number) {
       console.log(i);
+      const query: Query = this.queries[i];
+      console.log(query);
   }
 
   ngOnDestroy() {

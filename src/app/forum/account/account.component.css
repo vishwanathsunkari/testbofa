@@ -51,7 +51,8 @@
     /* border: 1px solid yellow; */
 }
 .account-aboutme-p{
-    padding:10px;
+    padding-left:10px;
+    padding-right: 10px;
     line-height: 25px;
 }
 .account-numberqstns-btn{
@@ -60,12 +61,19 @@
     border-radius: 50%;
     border: none;
 }
+.account-div{
+    /* background-color: rgb(38, 48, 49); */
+    height: 100vh;
+    margin: 0;
+}
 .account-main-div{
     margin-top:30px;
     margin-left: 280px;
     border: 1px solid silver;
-    box-shadow: 1px 1px 5px 1px silver;
+    /* box-shadow: 1px 1px 5px 1px silver; */
     margin-right: 280px;
+    padding-bottom: 20px;
+    background-color: white;
 }
 .account-proimage-div,.account-name-div,.account-prodetails-div{
     /* border: 1px solid green; */
@@ -90,4 +98,8 @@
     margin-top:10px;
     border: 0;
     height: 1px;
+}
+.account-aboutmehead-p{
+    font-weight: bold;
+    margin-left: 10px;
 }

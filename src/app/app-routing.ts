@@ -23,7 +23,7 @@ const routes: Routes = [
     {path: 'myQueries', component: MyQueriesComponent},
     {path: 'queryFeed', component: QueryFeedComponent},
   ], canActivate: [AuthGaurd]},
-  {path: 'account', component: AccountComponent, canActivate: [AuthGaurd]},
+  {path: 'account', component: AccountComponent},
   { path: 'onBoarding', component: OnBoardingComponent},
   {path: '**', redirectTo: '/', pathMatch: 'full'}
 ];
