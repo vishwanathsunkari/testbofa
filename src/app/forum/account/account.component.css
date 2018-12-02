@@ -82,7 +82,9 @@
 
 .account-name-div{
     /* text-align: center; */
-    font-size: 30px;
+    font-size: 20px;
+    /* border: 1px solid red; */
+    padding: 10px;
 }
 
 .account-prodetails-div{

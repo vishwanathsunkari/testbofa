@@ -1,0 +1,58 @@
+.singeQuery {
+    text-align: center;
+    background-color: #929292;
+    height: 55vh;
+    color: white;
+    padding: 0;
+    margin:0;
+    font-size: 35px;
+    /* margin-top: -15px; */
+  }
+
+  
+.singleQuery-code-maticon{
+    font-size: 60px;
+    margin-top: 10px;
+    
+    margin-right: 50px;
+  }
+
+  .singleQuery-details-div{
+      /* border: 1px solid red; */
+      /* margin-top: -240px; */
+
+  }
+
+  .singleQuery-query-div{
+      margin-top: 10px;
+      
+      width: 700px;
+      /* border: 1px solid green; */
+      background-color: white;
+      box-shadow: 2px 1px rgb(124, 121, 121), 0em 0 1em rgb(104, 101, 101);
+  }
+  h2, h5, .answer-div{
+      text-align: center
+  }
+
+  .singleQuery-div{
+      margin-left: 20px;
+      margin-right: 20px
+  }
+
+.test{
+    /* border: 1px solid orange; */
+    margin-top: -260px;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+
+  .singleQuery-content-card {
+      color: #050505;
+      padding: 20px;
+   
+  }

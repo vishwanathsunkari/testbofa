@@ -22,7 +22,7 @@ const routes: Routes = [
     {path: 'edit/:id', component: NewQueryComponent},
     {path: 'myQueries', component: MyQueriesComponent},
     {path: 'queryFeed', component: QueryFeedComponent},
-  ], canActivate: [AuthGaurd]},
+  ]},
   {path: 'account', component: AccountComponent},
   { path: 'onBoarding', component: OnBoardingComponent},
   {path: '**', redirectTo: '/', pathMatch: 'full'}

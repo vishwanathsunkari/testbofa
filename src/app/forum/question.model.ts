@@ -4,5 +4,6 @@ export interface Query {
   description: string;
   date?: any |  Date;
   state?: 'completed' | 'cancelled' | 'inProgress' | null;
+  answer?: string;
 }
 

@@ -23,14 +23,10 @@
                       <mat-header-cell *matHeaderCellDef mat-sort-header>State</mat-header-cell>
                       <mat-cell *matCellDef="let element">{{element.state}}</mat-cell>
                     </ng-container>
-                    <!-- <ng-container matColumnDef="index">
-                            <mat-header-cell *matHeaderCellDef> Index </mat-header-cell>
-                            <mat-cell *matCellDef="let element; let i = index;">{{i}}</mat-cell>
-                          </ng-container> -->
                 <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
                 <mat-row class="mat-element-row" *matRowDef="let row; columns: displayedColumns; let i = index;" (click)="onClick(i)"></mat-row>
             </mat-table>
-            <mat-paginator  [pageSize]="5" [pageSizeOptions]="[1, 2, 5, 10]"></mat-paginator>
+            <mat-paginator  [pageSize]="10" [pageSizeOptions]="[1, 2, 5, 10]"></mat-paginator>
       </mat-card>
 
 </div>
